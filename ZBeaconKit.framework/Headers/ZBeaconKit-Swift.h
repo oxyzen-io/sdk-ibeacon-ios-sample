@@ -165,9 +165,8 @@ SWIFT_CLASS("_TtC10ZBeaconKit7Manager")
 + (NSString * _Nullable)packageId;
 + (NSString * _Nullable)uuid;
 - (nonnull instancetype)initWithEmail:(NSString * _Nonnull)email authToken:(NSString * _Nonnull)token brandId:(NSInteger)brandId OBJC_DESIGNATED_INITIALIZER;
-- (void)startMonitoring;
-- (void)stopMonitoring;
-- (void)restartMonitoring;
+- (void)start;
+- (void)stop;
 @end
 
 

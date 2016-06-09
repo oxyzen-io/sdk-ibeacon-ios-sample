@@ -22,9 +22,15 @@
                   initWithEmail:@"xxxx@zoyi.co"
                   authToken:@"A1B2C3D4E5F6"
                   brandId:0];
+
+  [Manager setDebugMode:true];
+  [self.manager start];
+
   NSLog(@"%@", [Manager uuid]);
   NSLog(@"%@", [Manager packageId]);
-  [Manager setDebugMode:true];
+
+//  [self.manager stop];
+
   return YES;
 }
 
