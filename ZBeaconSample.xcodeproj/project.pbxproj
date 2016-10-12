@@ -15,8 +15,7 @@
 		1453498D1CB26D1500832157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453498B1CB26D1500832157 /* LaunchScreen.storyboard */; };
 		145349981CB26D1500832157 /* ZBeaconSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 145349971CB26D1500832157 /* ZBeaconSampleTests.m */; };
 		145349A31CB26D1500832157 /* ZBeaconSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 145349A21CB26D1500832157 /* ZBeaconSampleUITests.m */; };
-		14534A011CB271FC00832157 /* ZBeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14534A001CB271FC00832157 /* ZBeaconKit.framework */; };
-		14534A021CB2728F00832157 /* ZBeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14534A001CB271FC00832157 /* ZBeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1494110A1DAE19BE0031CD5C /* ZBeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149411091DAE19BE0031CD5C /* ZBeaconKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14534A021CB2728F00832157 /* ZBeaconKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +65,7 @@
 		1453499E1CB26D1500832157 /* ZBeaconSample.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZBeaconSample.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		145349A21CB26D1500832157 /* ZBeaconSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBeaconSampleUITests.m; sourceTree = "<group>"; };
 		145349A41CB26D1500832157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14534A001CB271FC00832157 /* ZBeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZBeaconKit.framework; sourceTree = "<group>"; };
+		149411091DAE19BE0031CD5C /* ZBeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZBeaconKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14534A011CB271FC00832157 /* ZBeaconKit.framework in Frameworks */,
+				1494110A1DAE19BE0031CD5C /* ZBeaconKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +97,7 @@
 		145349711CB26D1500832157 = {
 			isa = PBXGroup;
 			children = (
-				14534A001CB271FC00832157 /* ZBeaconKit.framework */,
+				149411091DAE19BE0031CD5C /* ZBeaconKit.framework */,
 				1453497C1CB26D1500832157 /* ZBeaconSample */,
 				145349961CB26D1500832157 /* ZBeaconSampleTests */,
 				145349A11CB26D1500832157 /* ZBeaconSampleUITests */,

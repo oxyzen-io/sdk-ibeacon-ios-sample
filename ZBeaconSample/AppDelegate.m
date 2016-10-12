@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 @interface AppDelegate ()
 
@@ -24,15 +25,36 @@
                   brandId:0];
 
   [Manager setDebugMode:true];
+
+  NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+  NSString *deviceIdWithSalt = [deviceId stringByAppendingString:@"YOUR_SALT"];
+  NSString *customerId = [self hmac: deviceIdWithSalt withKey: @"YOUR_KEY_FOR_HMAC"];
+
+  [Manager setCustomerId: customerId];
   [self.manager start];
 
-  NSLog(@"%@", [Manager uuid]);
+  NSLog(@"%@", [Manager customerId]);
   NSLog(@"%@", [Manager packageId]);
 
 //  [self.manager stop];
 
   return YES;
 }
+
+- (NSString *) hmac: (NSString *)plaintext withKey:(NSString *)key
+  {
+    const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *cData = [plaintext cStringUsingEncoding:NSASCIIStringEncoding];
+    unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
+    CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    NSData *HMACData = [NSData dataWithBytes:cHMAC length:sizeof(cHMAC)];
+    const unsigned char *buffer = (const unsigned char *)[HMACData bytes];
+    NSMutableString *HMAC = [NSMutableString stringWithCapacity:HMACData.length * 2];
+    for (int i = 0; i < HMACData.length; ++i){
+      [HMAC appendFormat:@"%02x", buffer[i]];
+    }
+    return HMAC;
+  }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
