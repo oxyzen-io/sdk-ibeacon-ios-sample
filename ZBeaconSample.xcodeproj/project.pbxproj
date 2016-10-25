@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140C54261DBF06A40042FDA2 /* ZBeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140C54251DBF06A40042FDA2 /* ZBeaconKit.framework */; };
 		1453497F1CB26D1500832157 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1453497E1CB26D1500832157 /* main.m */; };
 		145349821CB26D1500832157 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 145349811CB26D1500832157 /* AppDelegate.m */; };
 		145349851CB26D1500832157 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 145349841CB26D1500832157 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		1453498D1CB26D1500832157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1453498B1CB26D1500832157 /* LaunchScreen.storyboard */; };
 		145349981CB26D1500832157 /* ZBeaconSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 145349971CB26D1500832157 /* ZBeaconSampleTests.m */; };
 		145349A31CB26D1500832157 /* ZBeaconSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 145349A21CB26D1500832157 /* ZBeaconSampleUITests.m */; };
-		1494110A1DAE19BE0031CD5C /* ZBeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149411091DAE19BE0031CD5C /* ZBeaconKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		140C54251DBF06A40042FDA2 /* ZBeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZBeaconKit.framework; sourceTree = "<group>"; };
 		1453497A1CB26D1500832157 /* ZBeaconSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBeaconSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1453497E1CB26D1500832157 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		145349801CB26D1500832157 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		1453499E1CB26D1500832157 /* ZBeaconSample.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZBeaconSample.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		145349A21CB26D1500832157 /* ZBeaconSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBeaconSampleUITests.m; sourceTree = "<group>"; };
 		145349A41CB26D1500832157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		149411091DAE19BE0031CD5C /* ZBeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZBeaconKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1494110A1DAE19BE0031CD5C /* ZBeaconKit.framework in Frameworks */,
+				140C54261DBF06A40042FDA2 /* ZBeaconKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 		145349711CB26D1500832157 = {
 			isa = PBXGroup;
 			children = (
-				149411091DAE19BE0031CD5C /* ZBeaconKit.framework */,
+				140C54251DBF06A40042FDA2 /* ZBeaconKit.framework */,
 				1453497C1CB26D1500832157 /* ZBeaconSample */,
 				145349961CB26D1500832157 /* ZBeaconSampleTests */,
 				145349A11CB26D1500832157 /* ZBeaconSampleUITests */,
@@ -458,14 +458,14 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ZBeaconSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZBeaconKit.framework",
 					"$(PROJECT_DIR)/ZBeaconKit.framework/Headers",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoyi.ZBeaconSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoyi.ZBeacon.test;
 				PRODUCT_NAME = ZBeaconSample;
 				PROVISIONING_PROFILE = "";
 			};
@@ -483,14 +483,14 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ZBeaconSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZBeaconKit.framework",
 					"$(PROJECT_DIR)/ZBeaconKit.framework/Headers",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoyi.ZBeaconSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoyi.ZBeacon.test;
 				PRODUCT_NAME = ZBeaconSample;
 				PROVISIONING_PROFILE = "";
 			};
