@@ -22,7 +22,9 @@
   self.manager = [[Manager alloc]
                   initWithEmail:@"xxxx@zoyi.co"
                   authToken:@"A1B2C3D4E5F6"
-                  brandId:0];
+                  brandId:0
+                  target:TargetProduction];
+
 
   [Manager setDebugMode:true];
 
