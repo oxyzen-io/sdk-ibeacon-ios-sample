@@ -20,9 +20,8 @@
   // Override point for customization after application launch.
 
   self.manager = [[Manager alloc]
-                  initWithEmail:@"xxxx@zoyi.co"
-                  authToken:@"A1B2C3D4E5F6"
-                  brandId:0
+                  initWithEmail:@"app@zoyi.co"
+                  authToken:@"17bFLC5F3ddQNwSHKxSk"
                   target:TargetProduction];
 
 
